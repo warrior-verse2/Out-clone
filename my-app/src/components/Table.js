@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PopUpModal from "../components/PopupModal";
+import Image from "next/image";
 
 const Table = ({ error, openModal }) => {
   const [modalIsOpen, setModalIsOpen] = useState(openModal || false);
@@ -16,9 +17,9 @@ const Table = ({ error, openModal }) => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-1">
           <span>My Files</span>
-          <img src="./img/chevron-right.svg" alt="" />
+          <Image width={18} height={18} src="/img/chevron-right.svg" alt="" />
           <span>Shared Files</span>
-          <img src="./img/chevron-right.svg" alt="" />
+          <Image width={18} height={18} src="/img/chevron-right.svg" alt="" />
           <span>Member Files</span>
         </div>
         <div class="overflow-hidden rounded-lg shadow-lg ring-[0.05rem] ring-gray-300">
@@ -27,19 +28,31 @@ const Table = ({ error, openModal }) => {
               <tr className="cursor-pointer ">
                 <th class="w-1/3 p-3 border-b border-gray-300 font-medium text-start lg:pl-16 hover:bg-gray-200">
                   <div className="flex items-center gap-2">
-                    <img src="./img/file.svg" alt="" />
+                    <Image width={18} height={18} src="/img/file.svg" alt="" />
                     <div className="flex items-center gap-4">
                       <span>Name</span>
-                      <img src="./img/chevron-down" alt="" />
+                      <Image
+                        width={18}
+                        height={18}
+                        src="/img/chevron-down.svg"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </th>
                 <th class="w-1/3 p-3 border-b border-gray-300 font-medium text-start lg:pl-16 hover:bg-gray-200">
                   <div className="flex items-center gap-2">
                     <span>Modified</span>
-                    <img src="./img/down-arrow.svg" alt="" />
-                    <img
-                      src="./img/chevron-down.svg"
+                    <Image
+                      width={18}
+                      height={18}
+                      src="/img/down-arrow.svg"
+                      alt=""
+                    />
+                    <Image
+                      width={18}
+                      height={18}
+                      src="/img/chevron-down.svg"
                       alt=""
                       className="w-0 invisible md:visible md:w-auto"
                     />
@@ -48,7 +61,12 @@ const Table = ({ error, openModal }) => {
                 <th class="w-1/3 p-3 border-b border-gray-300 font-medium text-start lg:pl-16 hover:bg-gray-200">
                   <div className="flex items-center gap-2">
                     <span>File size</span>
-                    <img src="./img/chevron-down.svg" alt="" />
+                    <Image
+                      width={18}
+                      height={18}
+                      src="/img/chevron-down.svg"
+                      alt=""
+                    />
                   </div>
                 </th>
                 <th class="md:w-1/3 md:p-3 border-b border-gray-300 lg:pl-16 w-0 h-0 invisible md:visible md:hover:bg-gray-200">
@@ -66,7 +84,12 @@ const Table = ({ error, openModal }) => {
               <tr className="cursor-pointer hover:bg-gray-200">
                 <td class="w-1/3 p-3 border-b border-gray-300 lg:pl-16">
                   <div className="flex items-center gap-4">
-                    <img src="./img/folder-brown.svg" alt="" />
+                    <Image
+                      width={18}
+                      height={18}
+                      src="/img/folder-brown.svg"
+                      alt=""
+                    />
                     <span>EMC 2023 Highlights</span>
                   </div>
                 </td>
@@ -83,7 +106,7 @@ const Table = ({ error, openModal }) => {
               <tr className="cursor-pointer hover:bg-gray-200">
                 <td class="w-1/3 p-3 border-b border-gray-300 lg:pl-16">
                   <div className="flex items-center gap-4">
-                    <img src="./img/pdf.svg" alt="" />
+                    <Image width={18} height={18} src="/img/pdf.svg" alt="" />
                     <span>EMC 2023 Visitor Request</span>
                   </div>
                 </td>

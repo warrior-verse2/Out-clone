@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/fOneDrive.svg" />
+        <link rel="shortcut icon" href="/OneDrive.svg" />
         <title>Microsoft OneDrive</title>
       </Head>
       <div className="bg-white h-screen text-sm flex flex-col">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 const SideNav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,7 +28,7 @@ const SideNav = () => {
                 : "flex items-center gap-2 px-2"
             }
           >
-            <img src="/img/folder.svg" alt="" />
+            <Image width={18} height={18} src="/img/folder.svg" alt="" />
             <div className="cursor-pointer">My files</div>
           </div>
           <div
@@ -38,7 +39,7 @@ const SideNav = () => {
                 : "flex items-center gap-2 px-2"
             }
           >
-            <img src="/img/recent.svg" alt="" />
+            <Image width={18} height={18} src="/img/recent.svg" alt="" />
             <div className="cursor-pointer">Recent</div>
           </div>
           <div
@@ -49,7 +50,7 @@ const SideNav = () => {
                 : "flex items-center gap-2 px-2"
             }
           >
-            <img src="/img/photo.svg" alt="" />
+            <Image width={18} height={18} src="/img/photo.svg" alt="" />
             <div className="cursor-pointer">Photos</div>
           </div>
           <div
@@ -60,7 +61,7 @@ const SideNav = () => {
                 : "flex items-center gap-2 px-2"
             }
           >
-            <img src="/img/shared.svg" alt="" />
+            <Image width={18} height={18} src="/img/shared.svg" alt="" />
             <div className="cursor-pointer">Shared</div>
           </div>
           <div
@@ -71,7 +72,7 @@ const SideNav = () => {
                 : "flex items-center gap-2 px-2"
             }
           >
-            <img src="/img/recycle.svg" alt="" />
+            <Image width={18} height={18} src="/img/recycle.svg" alt="" />
             <div className="cursor-pointer">Recycle bin</div>
           </div>
         </div>
@@ -94,7 +95,7 @@ const SideNav = () => {
               href="https://www.microsoft.com/en-us/microsoft-365/onedrive/compare-onedrive-plans?activetab=tab%3aprimaryr1"
               target="_blank"
             >
-              <img src="./img/diamond2.svg" alt="" />
+              <Image width={18} height={18} src="/img/diamond2.svg" alt="" />
               Buy storage
             </a>
           </button>
